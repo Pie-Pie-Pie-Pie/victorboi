@@ -1,7 +1,7 @@
 #globalvariables
-param1 = 0
-param2 = 0
-op = "+"
+param1=1
+param2=1
+op="?"
 
 #function definition
 def intro():
@@ -9,6 +9,9 @@ def intro():
     return
 
 def inputBoi():
+    global param1
+    global param2
+    global op
     #input first peram
     param1=input("WHAT IS YOUR FIRST NUMBER")
     param2=input("WHAT IS YOUR SECOND NUMBER")
@@ -16,11 +19,23 @@ def inputBoi():
     return
     
 def calculate():
-    
+    global op
+    global param1
+    global param2
+    if (op == "*"):
+        print(int(param1)*int(param2))
+    elif (op == "/"):
+        print(int(param1)/int(param2))
+    elif (op == "+"):
+        print(int(param1)+int(param2))
+    elif (op == "-"):
+        print(int(param1)-int(param2))
     return
-    
+
+def redo():
+    print ("press f5 if you like to restart")
 #executable code
 intro()
 inputBoi()
 calculate()
-
+redo()
